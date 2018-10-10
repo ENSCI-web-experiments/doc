@@ -15,6 +15,7 @@
 - [HTML5 et CSS3](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3)
 - [JavaScript](https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript)
 - [Processing](https://processing.org/)
+- [Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ## Bibliothèques
 
