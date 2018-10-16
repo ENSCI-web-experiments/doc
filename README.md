@@ -25,8 +25,3 @@
 - [SVG.js](http://svgjs.com/) : animations vectorielles
 - [D3](https://d3js.org/) : dataviz
 - [Howler](https://howlerjs.com/) : bibliothèque audio
-
-## Test
-
-- Premier Test
-- Coucou
