@@ -323,20 +323,20 @@ div {
 -----
 
 - `display` : Mode d'affichage des blocs
- - `block` : en tant que bloc (une ligne est insérée avant et après le bloc)
- - `inline` : en ligne
- - `list-item` : en tant qu'élément de liste
- - `none` : non affiché
+  - `block` : en tant que bloc (une ligne est insérée avant et après le bloc)
+  - `inline` : en ligne
+  - `list-item` : en tant qu'élément de liste
+  - `none` : non affiché
  
 -----
 
 - `list-style-type` : Type de puce ou de numérotation des listes (s'applique aux éléments `ul`, `ol` et `li`, et ceux avec `display: list-item;`)
- - `disc` : disque
- - `circle` : cercle
- - `square` : carré
- - `decimal` : 1 2 3 4 ...
- - `lower-roman` : i ii iii iv ...
- - `upper-roman` : I II III IV ...
- - `lower-alpha` : a b c d ...
- - `upper-alpha` : A B C D ...
- - `none` : pas de puce
+  - `disc` : disque
+  - `circle` : cercle
+  - `square` : carré
+  - `decimal` : 1 2 3 4 ...
+  - `lower-roman` : i ii iii iv ...
+  - `upper-roman` : I II III IV ...
+  - `lower-alpha` : a b c d ...
+  - `upper-alpha` : A B C D ...
+  - `none` : pas de puce
