@@ -2,6 +2,8 @@
 
 Éléments de base du langage HTML (listes non exhaustives, voir [ici](https://fr.flossmanuals.net/initiation-html5/introduction/) par exemple pour une introduction plus complète ou [là](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/HTML5) pour une référence plus pointue).
 
+N'hésitez pas à tester "en live" avec un outil tel [CodePen](https://codepen.io/).
+
 ## Structure de base d'un fichier HTML
 
 ```html
