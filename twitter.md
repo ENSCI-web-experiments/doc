@@ -2,6 +2,8 @@
 
 Exemple de base disponible sur [CodePen](https://codepen.io/LePhasme/pen/EdOKZX).
 
+Il s'agit d'un sous-ensemble de l'[API Twitter officielle](https://developer.twitter.com/en/docs/api-reference-index).
+
 ## Prérequis HTML
 
 ```html
