@@ -47,21 +47,50 @@ server.emit('search', {
       keyword: 'text',
       since: '2017-01-25',
       count: 10
-});
+})
 ```
 
 #### Réception de la requête :
 
 Résultat :
 
-- `data` : la liste des tweets
+- `data.statuses` : la liste des tweets
 - `keyword` : le texte recherché
 - `error` : `true` ou `false` (si `error` vaut `true`, alors le résultat contient une propriété `reason` décrivant l'erreur)
 
 ```javascript
 server.on('search', function(result) {
-    var tweets = result.data
+    var tweets = result.data.statuses
     // ...
+})
+```
+
+Exemple (https://codepen.io/LePhasme/pen/YRYyrN) :
+
+```javascript
+// Connexion au serveur :
+var server = io.connect('https://io-io-io.io:3093')
+
+// Quand on est connecté...
+server.on('connected', function () {
+    // ...on émet un requête de recherche sur le mot-clé "text" :
+    server.emit('search', {
+        keyword: 'text',
+        since: '2017-01-25',
+        count: 10
+    })
+})
+
+// Quand on récupère un résultat de recherche...
+server.on('search', function(result) {
+    var tweets = result.data.statuses
+    // ...on parcourt tous les tweets un par un...
+    for (var i = 0; i < tweets.length; i++) {
+        // ...pour en afficher le texte dans la console :
+        console.log(tweets[i].text)
+        // Ainsi que dans la page :
+        $('<p>' + tweets[i].text + '</p>').appendTo('body')
+    }
 })
 ```
 
@@ -76,7 +105,7 @@ Paramètres :
 ```javascript
 server.emit('subscribe', {
       keyword: 'text'
-});
+})
 ```
 
 #### Réception de la requête :
@@ -105,7 +134,7 @@ Paramètres :
 ```javascript
 server.emit('followers', {
       name: 'LePhasme'
-});
+})
 ```
 
 #### Réception de la requête :
@@ -134,7 +163,7 @@ Paramètres :
 ```javascript
 server.emit('following', {
       name: 'LePhasme'
-});
+})
 ```
 
 #### Réception de la requête :
@@ -163,7 +192,7 @@ Paramètres :
 ```javascript
 server.emit('user', {
       id: 17386789
-});
+})
 ```
 
 #### Réception de la requête :
@@ -194,7 +223,7 @@ Paramètres :
 server.emit('user-tweets', {
       name: 'LePhasme',
       count: 20
-});
+})
 ```
 
 #### Réception de la requête :
