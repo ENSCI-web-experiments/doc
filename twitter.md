@@ -212,6 +212,56 @@ server.on('followers-full', function(result) {
 })
 ```
 
+**ATTENTION : cette requête peut prendre beaucoup de temps à s'exécuter avant de retourner un résultat !**
+
+Exemple (https://codepen.io/LePhasme/pen/MzrKBj) :
+
+```javascript
+// Connexion au serveur :
+var server = io.connect('https://io-io-io.io:3093')
+
+// Quand on est connecté...
+server.on('connected', function () {
+    // ...on émet un requête de followers sur "LePhasme" :
+    server.emit('followers-full', {
+        name: 'LePhasme'
+    })
+})
+
+// Quand on récupère un résultat...
+server.on('followers-full', function(result) {
+    var followers = result.data
+    console.log(result)
+    // ...on parcourt tous les followers un par un...
+    for (var i = 0; i < followers.length; i++) {
+        // ...pour en afficher les informations dans la console :
+        console.log(followers[i])
+        // Ainsi que dans la page :
+        $('<p>' + followers[i].name + '</p>').appendTo('body')
+    }
+})
+```
+
+Les principales propriétés d'un follower sont les mêmes que celles d'un utilisateur :
+
+- `created_at` : date de création du compte
+- `description` : texte de description du profil
+- `followers_count` : nombre de followers
+- `following` : `true` si le follower suit l'utilisateur, `false` sinon 
+- `friends_count` : nombre d'abonnements
+- `id` et `id_str` : identifiant de l'utilisateur
+- `lang` : langage de l'utilisateur
+- `location` : localisation de l'utilisateur
+- `name` : nom complet
+- `profile_background_image_url` : adresse "normale" de l'image de fond du profil
+- `profile_background_image_url_https` : adresse sécurisée de l'image de fond du profil
+- `profile_image_url` : adresse "normale" de l'image de profil
+- `profile_image_url_https` : adresse sécurisée de l'image de profil
+- `screen_name` : nom d'utilisateur
+- `status` : dernier tweet publié (voir la requête `search` pour les propriétés d'un tweet)
+- `statuses_count` : nombre de tweets publiés
+- `url` : adresse personnelle associée au compte de l'utilisateur
+
 ### Récupération des données complètes des personnes suivies : `following-full`
 
 #### Envoi de la requête
@@ -241,6 +291,8 @@ server.on('following-full', function(result) {
 })
 ```
 
+Exemple : mêmes principes et nature de résultats que `followers-full`.
+
 ### Récupération des données de l'utilisateur à partir de son identifiant : `user`
 
 #### Envoi de la requête
@@ -269,6 +321,8 @@ server.on('user', function(result) {
     // ...
 })
 ```
+
+Pour les propriétés d'un utilisateur, voir les résultats de la requête `followers-full`.
 
 ### Récupérer les tweets d'un utilisateur : `user-tweets`
 
