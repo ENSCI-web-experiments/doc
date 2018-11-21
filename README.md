@@ -29,6 +29,7 @@
 - [SVG.js](http://svgjs.com/) : animations vectorielles
 - [D3](https://d3js.org/) : dataviz
 - [Howler](https://howlerjs.com/) : bibliothèque audio
+- [Exif-js](https://github.com/exif-js/exif-js) : récupération des données EXIF (metadata) d'une image
 
 -----
 
