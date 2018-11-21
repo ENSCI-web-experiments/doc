@@ -43,9 +43,12 @@
 - https://hackernoon.com/mastering-python-web-scraping-get-your-data-back-e9a5cc653d88
 - https://medium.com/the-andela-way/introduction-to-web-scraping-87edf94ac692
 - http://blog.danwin.com/examples-of-web-scraping-in-python-3-x-for-data-journalists/
+- https://www.islean-consulting.fr/fr/transformation-digitale/scraping-pages-web-legal/
+- https://benbernardblog.com/web-scraping-and-crawling-are-perfectly-legal-right/
 
 ## Projets (Net art, Web Scraping, détournement...)
  
+- https://www.quora.com/What-are-some-interesting-web-scraping-projects-you-have-done
 - https://luke.deentaylor.com/wikipedia/
 - https://www.franceinter.fr/culture/quand-les-artistes-s-interessent-aux-donnees
 - http://www.artwiki.fr/wakka.php?wiki=WebArt
@@ -58,3 +61,10 @@
 - https://github.com/ttezel/twit
 - https://www.maciejcieslar.com/how-to-create-an-instagram-bot-with-node-js/
 - https://scotch.io/@devGson/using-the-instagram-api-with-node-and-expressjs
+- https://re-publica.com/en/session/scraping-art-mapping-neuland
+- http://www.customarttools.com/blog/2016/2/26/fmdelivery
+- http://gogoame.sumbioun.com/
+- https://brig.ht/fr/work/un-bot-qui-transforme-des-tweets-en-creatures-uniques/
+- https://media.digitalarti.com/fr/blog/digitalarti_mag/data_art_l_art_d_un_monde_d_informations
+- https://tech.co/why-twitter-bot-developers-love-twitter-2018-01
+- https://twitter.com/dylanmckaynz/status/976368845635035138
