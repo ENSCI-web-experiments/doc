@@ -69,3 +69,5 @@
 - https://media.digitalarti.com/fr/blog/digitalarti_mag/data_art_l_art_d_un_monde_d_informations
 - https://tech.co/why-twitter-bot-developers-love-twitter-2018-01
 - https://twitter.com/dylanmckaynz/status/976368845635035138
+- https://hackernoon.com/text-processing-and-sentiment-analysis-of-twitter-data-22ff5e51e14c
+- https://towardsdatascience.com/text-mining-twitter-extraction-and-stepwise-guide-to-generate-a-word-cloud-a2c9d626008d
