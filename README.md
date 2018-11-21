@@ -25,3 +25,27 @@
 - [SVG.js](http://svgjs.com/) : animations vectorielles
 - [D3](https://d3js.org/) : dataviz
 - [Howler](https://howlerjs.com/) : bibliothèque audio
+
+-----
+
+## Statistiques globales
+
+- https://www.statista.com/ (ex : https://www.statista.com/markets/424/topic/540/social-media-user-generated-content/)
+- http://gs.statcounter.com/social-media-stats
+
+## Généralités techniques sur le Web Scraping
+
+- https://medium.com/le-reacteur/lart-du-scraping-i-672efa1ad96c
+- https://hackernoon.com/mastering-python-web-scraping-get-your-data-back-e9a5cc653d88
+- https://medium.com/the-andela-way/introduction-to-web-scraping-87edf94ac692
+- http://blog.danwin.com/examples-of-web-scraping-in-python-3-x-for-data-journalists/
+
+## Projets (Net art, Web Scraping, détournement...)
+ 
+- https://luke.deentaylor.com/wikipedia/
+- https://www.franceinter.fr/culture/quand-les-artistes-s-interessent-aux-donnees
+- http://www.artwiki.fr/wakka.php?wiki=WebArt
+- https://journals.openedition.org/rfsic/179
+- https://sawisms.blog/2017/11/16/le-glitch-ou-lart-de-detourner-les-medias-sociaux/
+- https://bengrosser.com/
+- http://clonezone.link/
