@@ -1,5 +1,9 @@
 # Documentation et références
 
+- [Aide mémoire HTML](https://github.com/ENSCI-web-experiments/doc/blob/master/html.md)
+- [Aide mémoire CSS](https://github.com/ENSCI-web-experiments/doc/blob/master/css.md)
+- [Interface Twitter](https://github.com/ENSCI-web-experiments/doc/blob/master/twitter.md)
+
 ## Outils
 
 - [GitHub](https://github.com) : archivage du code et de la documentation – _il est nécessaire de créer un compte utilisateur et de m'en communiquer l'identifiant_.
@@ -49,3 +53,8 @@
 - https://sawisms.blog/2017/11/16/le-glitch-ou-lart-de-detourner-les-medias-sociaux/
 - https://bengrosser.com/
 - http://clonezone.link/
+- https://github.com/Schmavery/facebook-chat-api
+- https://github.com/matthewmueller/x-ray
+- https://github.com/ttezel/twit
+- https://www.maciejcieslar.com/how-to-create-an-instagram-bot-with-node-js/
+- https://scotch.io/@devGson/using-the-instagram-api-with-node-and-expressjs
