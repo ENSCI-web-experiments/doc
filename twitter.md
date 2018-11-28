@@ -32,6 +32,70 @@ Il s'agit d'un sous-ensemble de l'[API Twitter officielle](https://developer.twi
 var server = io.connect('https://io-io-io.io:3093')
 ```
 
+### Récupération des tendances : `trends`
+
+#### Envoi de la requête
+
+Paramètres :
+
+- `id` : identifiant WOEID du lieu, voir http://www.woeidlookup.com/ (par défaut 1 = Global - _facultatif_)
+
+```javascript
+server.emit('trends', {
+      id: 1
+})
+```
+
+#### Réception de la requête :
+
+Résultat :
+
+- `data` : la liste des tendances
+- `error` : `true` ou `false` (si `error` vaut `true`, alors le résultat contient une propriété `reason` décrivant l'erreur)
+
+```javascript
+server.on('trends', function(result) {
+    var trends = result.data
+    // ...
+})
+```
+
+Exemple (https://codepen.io/LePhasme/pen/xQyqdj) :
+
+```javascript
+// Connexion au serveur :
+var server = io.connect('https://io-io-io.io:3093')
+
+// Quand on clique sur le bouton "Submit"...
+$('#change').on('click', function () {
+    // On lance une requête "trends" sur la zone géographique saisie (1 = global, 23424819 = France, cf. http://www.woeidlookup.com) :
+    server.emit('trends', {
+        id: parseInt($('#keyword').val(), 10)
+    })
+})
+
+// Quand on récupère un résultat...
+server.on('trends', function(result) {
+    var trends = result.data
+    $('#tweets').empty()
+    trends.forEach(function (trend) {
+      if (trend.tweet_volume === null) {
+          // Pas de nombre de tweets connu :
+          $('<p class="unknown">' + trend.name + '</p>').appendTo('#tweets')
+      } else {
+          // Nombre de tweets connu :
+          $('<p class="known">' + trend.name + ' (' + trend.tweet_volume + ' tweets)' + '</p>').appendTo('#tweets')
+      }
+    })
+})
+```
+
+Les principales propriétés d'une tendance sont :
+
+- `name`: le nom de la tendance (ou hashtag)
+- `tweet_volume` : nombre de tweets associés (peut valoir `null` = inconnu)
+- `url` : adresse de la tendance sur le site de Twitter
+
 ### Recherche de tweets : `search`
 
 #### Envoi de la requête
