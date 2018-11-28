@@ -4,6 +4,7 @@ Exemple de base disponible sur CodePen :
 
 - https://codepen.io/LePhasme/pen/RqYWKJ
 - https://codepen.io/LePhasme/pen/mQGeao
+- https://codepen.io/LePhasme/pen/LXgLOL
 
 Il s'agit de l'exposition via une interface WebSocket du module [Natural](https://github.com/NaturalNode/natural).
 
@@ -157,5 +158,57 @@ server.on('sentiment', function(result) {
     } else {
       $('<pre class="sentiment negatif">' + sentiment + '</pre>').appendTo('body')      
     }
+})
+```
+
+### Récupération des données phonétiques : `phonetics`
+
+#### Envoi de la requête
+
+Paramètres :
+
+- `text` : texte à analyser (**obligatoire**)
+
+```javascript
+server.emit('phonetics', {
+      text: 'I like this!'
+})
+```
+
+#### Réception de la requête :
+
+Résultat :
+
+- `data.phonetics` : les termes phonétique
+- `error` : `true` ou `false` (si `error` vaut `true`, alors le résultat contient une propriété `reason` décrivant l'erreur)
+
+```javascript
+server.on('phonetics', function(result) {
+    var phonetics = result.phonetics
+    // ...
+})
+```
+
+Exemple (https://codepen.io/LePhasme/pen/LXgLOL) :
+
+```javascript
+// Connexion au serveur :
+var server = io.connect('https://io-io-io.io:3093')
+
+// Quand on clique sur le bouton "Submit"...
+$('#change').on('click', function () {
+    // On lance une requête "phonetics" sur le texte saisi :
+    server.emit('phonetics', {
+        text: $('#keyword').val()
+    })
+})
+
+// Quand on récupère un résultat...
+server.on('phonetics', function(result) {
+    var phonetics = result.phonetics
+    $('#tweets').empty()
+    phonetics.forEach(function (phonetic) {
+     $('<pre>' + phonetic + '</pre>').appendTo('#tweets')
+    })
 })
 ```
